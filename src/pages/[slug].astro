@@ -1,0 +1,57 @@
+---
+import Base from '../layouts/Base.astro';
+import AppShell from '../components/AppShell.astro';
+import tools from '../data/tools.json';
+
+export function getStaticPaths() {
+  return tools.map((tool) => ({ params: { slug: tool.slug }, props: { tool } }));
+}
+const { tool } = Astro.props;
+const path = `/${tool.slug}/`;
+const title = `${tool.name} Online Free | PDFNest`;
+const related = tools.filter((t) => t.category === tool.category && t.id !== tool.id).slice(0, 8);
+const usesGemini = tool.category === 'AI Features' && tool.id !== 'ocr';
+const faq = [
+  { q: `Is ${tool.name} free?`, a: `Yes. ${tool.name} is free to use with no signup and no watermark added by us.` },
+  { q: 'Are my files uploaded to a server?',
+    a: usesGemini
+      ? 'Your PDF stays in your browser. The text extracted from it is sent to Google Gemini through our server to generate the result, and is not stored by PDFNest.'
+      : 'No. Files are processed locally in your browser, so your documents never leave your device.' },
+  { q: `How do I use ${tool.name}?`, a: 'Add your file, adjust the options if there are any, click Process, then download the result.' },
+  { q: 'Does it work on mobile?', a: 'Yes, PDFNest runs in any modern browser on desktop, tablet and phone. Very large files may be slow on older phones.' },
+];
+const jsonLd = [
+  { '@context': 'https://schema.org', '@type': 'WebApplication', name: `${tool.name} - PDFNest`, description: tool.description,
+    url: new URL(path, Astro.site).href, applicationCategory: 'UtilitiesApplication', operatingSystem: 'Any (web browser)',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' } },
+  { '@context': 'https://schema.org', '@type': 'FAQPage',
+    mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'PDFNest', item: new URL('/', Astro.site).href },
+    { '@type': 'ListItem', position: 2, name: tool.name, item: new URL(path, Astro.site).href } ] },
+];
+const homeTitle = 'PDFNest - Free Online PDF Tools: Merge, Compress, Convert, Sign & AI';
+const homeDesc = 'Free online PDF toolkit that runs in your browser: merge, split, compress, convert, sign, redact and OCR PDFs, plus AI summaries and translation. No signup.';
+---
+<Base title={title} description={tool.description} path={path} jsonLd={jsonLd} homeTitle={homeTitle} homeDesc={homeDesc}>
+  <AppShell />
+  <section id="seoContent" class="max-w-3xl mx-auto px-4 py-10 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+    <h1 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">{tool.name} Online Free</h1>
+    <p class="mb-6">{tool.description}</p>
+    <h2 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">How to use {tool.name}</h2>
+    <ol class="list-decimal pl-5 space-y-1 mb-6">
+      <li>Add your file by dragging it onto the page or clicking to browse.</li>
+      <li>Adjust the options if the tool offers any.</li>
+      <li>Click Process, then download your result.</li>
+    </ol>
+    <h2 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">Frequently asked questions</h2>
+    <dl class="space-y-3 mb-6">
+      {faq.map((f) => <div><dt class="font-medium text-slate-800 dark:text-slate-100">{f.q}</dt><dd>{f.a}</dd></div>)}
+    </dl>
+    <h2 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">Related PDF tools</h2>
+    <ul class="grid grid-cols-2 gap-x-4 gap-y-1">
+      {related.map((t) => <li><a class="text-brand-600 hover:underline" href={`/${t.slug}/`}>{t.name}</a></li>)}
+    </ul>
+    <p class="mt-6"><a class="text-brand-600 hover:underline" href="/">All tools</a> · <a class="text-brand-600 hover:underline" href="/blog/">PDF guides &amp; tips</a></p>
+  </section>
+</Base>

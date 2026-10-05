@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import AppShell from '../components/AppShell.astro';
+import tools from '../data/tools.json';
+const title = 'PDFNest - Free Online PDF Tools: Merge, Compress, Convert, Sign & AI';
+const desc = 'Free online PDF toolkit that runs in your browser: merge, split, compress, convert, sign, redact and OCR PDFs, plus AI summaries and translation. No signup.';
+const cats = [...new Set(tools.map((t) => t.category))];
+const jsonLd = [{ '@context': 'https://schema.org', '@type': 'WebSite', name: 'PDFNest', url: new URL('/', Astro.site).href }];
+---
+<Base title={title} description={desc} path="/" jsonLd={jsonLd} homeTitle={title} homeDesc={desc}>
+  <AppShell />
+  <section id="seoContent" class="max-w-5xl mx-auto px-4 py-10 text-sm text-slate-600 dark:text-slate-300">
+    <h1 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Free online PDF tools</h1>
+    <p class="mb-6">{tools.length} PDF tools that run in your browser: your files stay on your device. Merge, split, compress, convert, sign, redact and more, with optional AI features.</p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {cats.map((c) => (
+        <div>
+          <h2 class="font-semibold text-slate-900 dark:text-white mb-2">{c}</h2>
+          <ul class="space-y-1">
+            {tools.filter((t) => t.category === c).map((t) => <li><a class="text-brand-600 hover:underline" href={`/${t.slug}/`}>{t.name}</a></li>)}
+          </ul>
+        </div>
+      ))}
+    </div>
+    <p class="mt-6"><a class="text-brand-600 hover:underline" href="/blog/">PDF guides &amp; tips</a></p>
+  </section>
+</Base>

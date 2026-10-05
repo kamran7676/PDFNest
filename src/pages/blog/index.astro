@@ -1,0 +1,8 @@
+---
+import Simple from '../../layouts/Simple.astro';
+import articles from '../../../content/articles.mjs';
+---
+<Simple title="PDF Tips & Guides | PDFNest" description="Guides for merging, compressing, converting, protecting and redacting PDFs." path="/blog/">
+  <h1>PDF Tips &amp; Guides</h1>
+  <ul>{articles.map((a) => <li><a href={`/blog/${a.slug}/`}>{a.title}</a><br /><small>{a.description}</small></li>)}</ul>
+</Simple>

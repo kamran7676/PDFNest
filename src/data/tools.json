@@ -1,0 +1,310 @@
+[
+ {
+  "id": "merge",
+  "name": "Merge PDF",
+  "category": "Organize",
+  "description": "Combine multiple PDF files into one single document in any custom order.",
+  "slug": "merge-pdf"
+ },
+ {
+  "id": "split",
+  "name": "Split PDF",
+  "category": "Organize",
+  "description": "Split a PDF document by specific page ranges or into individual page files.",
+  "slug": "split-pdf"
+ },
+ {
+  "id": "extract",
+  "name": "Extract Pages",
+  "category": "Organize",
+  "description": "Select and extract only specific pages into a brand new PDF document.",
+  "slug": "extract-pages"
+ },
+ {
+  "id": "remove",
+  "name": "Remove Pages",
+  "category": "Organize",
+  "description": "Delete unwanted pages from your document visually or by page numbers.",
+  "slug": "remove-pages"
+ },
+ {
+  "id": "reorder",
+  "name": "Reorder / Organize Pages",
+  "category": "Organize",
+  "description": "Visually drag and drop thumbnails to reorder pages and export the modified PDF.",
+  "slug": "reorder-organize-pages"
+ },
+ {
+  "id": "rotate",
+  "name": "Rotate PDF",
+  "category": "Organize",
+  "description": "Rotate PDF pages clockwise or counter-clockwise (90°, 180°, or 270°).",
+  "slug": "rotate-pdf"
+ },
+ {
+  "id": "compress",
+  "name": "Compress PDF",
+  "category": "Optimize",
+  "description": "Reduce file size by re-rendering document pages at optimized JPEG compression quality levels.",
+  "slug": "compress-pdf"
+ },
+ {
+  "id": "img-to-pdf",
+  "name": "JPG / PNG to PDF",
+  "category": "Convert to PDF",
+  "description": "Convert images (JPG, PNG, WebP) into a beautiful PDF document with configurable margins.",
+  "slug": "jpg-png-to-pdf"
+ },
+ {
+  "id": "docx-to-pdf",
+  "name": "Word (DOCX) to PDF",
+  "category": "Convert to PDF",
+  "description": "Convert Word (.docx) to PDF keeping headings, bold, lists, tables. Urdu/Arabic supported.",
+  "slug": "word-docx-to-pdf"
+ },
+ {
+  "id": "txt-to-pdf",
+  "name": "Text to PDF",
+  "category": "Convert to PDF",
+  "description": "Convert plain text to PDF. Urdu/Arabic supported.",
+  "slug": "text-to-pdf"
+ },
+ {
+  "id": "pdf-to-img",
+  "name": "PDF to JPG / PNG",
+  "category": "Convert from PDF",
+  "description": "Render every page of your PDF into high-definition images packed inside a ZIP file.",
+  "slug": "pdf-to-jpg-png"
+ },
+ {
+  "id": "pdf-to-txt",
+  "name": "PDF to Text",
+  "category": "Convert from PDF",
+  "description": "Extract raw text content from all pages of a PDF document into a TXT file.",
+  "slug": "pdf-to-text"
+ },
+ {
+  "id": "page-numbers",
+  "name": "Add Page Numbers",
+  "category": "Edit & Security",
+  "description": "Stamp customized page numbers onto every page of your PDF file.",
+  "slug": "add-page-numbers"
+ },
+ {
+  "id": "watermark",
+  "name": "Add Watermark",
+  "category": "Edit & Security",
+  "description": "Overlay custom text watermarks across PDF pages with rotation and transparency controls.",
+  "slug": "add-watermark"
+ },
+ {
+  "id": "protect",
+  "name": "Protect PDF",
+  "category": "Edit & Security",
+  "description": "Encrypt your PDF document with a strong password to restrict viewing.",
+  "slug": "protect-pdf"
+ },
+ {
+  "id": "unlock",
+  "name": "Unlock PDF",
+  "category": "Edit & Security",
+  "description": "Remove password protection from encrypted PDF documents.",
+  "slug": "unlock-pdf"
+ },
+ {
+  "id": "ai-summarize",
+  "name": "AI Summarize PDF",
+  "category": "AI Features",
+  "description": "Extract document text and generate key takeaways and concise summary using Gemini AI.",
+  "slug": "ai-summarize-pdf"
+ },
+ {
+  "id": "ai-chat",
+  "name": "Chat with PDF",
+  "category": "AI Features",
+  "description": "Ask questions and interactively chat with your PDF content with page citations.",
+  "slug": "chat-with-pdf"
+ },
+ {
+  "id": "ai-translate",
+  "name": "Translate PDF Text",
+  "category": "AI Features",
+  "description": "Translate all document content into another language using Gemini AI.",
+  "slug": "translate-pdf-text"
+ },
+ {
+  "id": "ocr",
+  "name": "OCR Image Reader",
+  "category": "AI Features",
+  "description": "OCR scanned PDFs/images with Tesseract.js (English, Urdu, Arabic).",
+  "slug": "ocr-image-reader"
+ },
+ {
+  "id": "crop",
+  "name": "Crop PDF",
+  "category": "Organize",
+  "description": "Trim margins from every page by a set number of points.",
+  "slug": "crop-pdf"
+ },
+ {
+  "id": "redact",
+  "name": "Redact PDF",
+  "category": "Edit & Security",
+  "description": "Permanently black out words/phrases. Affected pages become images so hidden text cannot be copied.",
+  "slug": "redact-pdf"
+ },
+ {
+  "id": "sign",
+  "name": "Sign PDF",
+  "category": "Edit & Security",
+  "description": "Add a signature: draw it, type it, or upload an image (select the PDF first, then the image).",
+  "slug": "sign-pdf"
+ },
+ {
+  "id": "edit-text",
+  "name": "Edit PDF",
+  "category": "Edit & Security",
+  "description": "Add text, rectangles or highlights at a position on any page (positions are % of the page).",
+  "slug": "edit-pdf"
+ },
+ {
+  "id": "compare",
+  "name": "Compare PDFs",
+  "category": "Organize",
+  "description": "Select exactly two PDFs and get a page-by-page text difference report.",
+  "slug": "compare-pdfs"
+ },
+ {
+  "id": "flatten",
+  "name": "Flatten Forms",
+  "category": "Edit & Security",
+  "description": "Turn fillable form fields into fixed page content.",
+  "slug": "flatten-forms"
+ },
+ {
+  "id": "repair",
+  "name": "Repair PDF",
+  "category": "Optimize",
+  "description": "Rebuild a damaged PDF by copying its readable pages into a clean file.",
+  "slug": "repair-pdf"
+ },
+ {
+  "id": "pdf-to-word",
+  "name": "PDF to Word",
+  "category": "Convert from PDF",
+  "description": "Convert the text of a PDF into an editable .docx (text-based PDFs; run OCR first for scans).",
+  "slug": "pdf-to-word"
+ },
+ {
+  "id": "pdf-to-excel",
+  "name": "PDF to Excel",
+  "category": "Convert from PDF",
+  "description": "Detect tables by text alignment and export one sheet per page to .xlsx (text-based PDFs).",
+  "slug": "pdf-to-excel"
+ },
+ {
+  "id": "excel-to-pdf",
+  "name": "Excel to PDF",
+  "category": "Convert to PDF",
+  "description": "Convert every sheet of an .xlsx/.xls/.csv file into PDF pages.",
+  "slug": "excel-to-pdf"
+ },
+ {
+  "id": "header-footer",
+  "name": "Header & Footer",
+  "category": "Edit & Security",
+  "description": "Add header/footer text to every page. Use {n} and {total} for page numbers.",
+  "slug": "header-and-footer"
+ },
+ {
+  "id": "metadata",
+  "name": "Metadata Editor",
+  "category": "Edit & Security",
+  "description": "Edit title, author, subject and keywords (blank fields are left unchanged).",
+  "slug": "metadata-editor"
+ },
+ {
+  "id": "grayscale",
+  "name": "Grayscale PDF",
+  "category": "Optimize",
+  "description": "Convert pages to black & white (rasterizes pages; text becomes non-selectable).",
+  "slug": "grayscale-pdf"
+ },
+ {
+  "id": "extract-images",
+  "name": "Extract Images",
+  "category": "Convert from PDF",
+  "description": "Pull out the embedded pictures from your PDF into a ZIP of PNG files.",
+  "slug": "extract-images"
+ },
+ {
+  "id": "blank-page-remover",
+  "name": "Remove Blank Pages",
+  "category": "Organize",
+  "description": "Detect and delete pages that contain (almost) no content.",
+  "slug": "remove-blank-pages"
+ },
+ {
+  "id": "ai-rewrite",
+  "name": "AI Tone Rewriter",
+  "category": "AI Features",
+  "description": "Rewrite the whole document in a different tone using Gemini.",
+  "slug": "ai-tone-rewriter"
+ },
+ {
+  "id": "ai-quiz",
+  "name": "AI Quiz Generator",
+  "category": "AI Features",
+  "description": "Generate a multiple-choice quiz with answers from your PDF.",
+  "slug": "ai-quiz-generator"
+ },
+ {
+  "id": "ai-table",
+  "name": "AI Extract Tables",
+  "category": "AI Features",
+  "description": "Find tables in the PDF text and export them as CSV (open in Excel).",
+  "slug": "ai-extract-tables"
+ },
+ {
+  "id": "ai-redact-smart",
+  "name": "AI Smart Redaction",
+  "category": "AI Features",
+  "description": "Gemini finds personal data (names, emails, phones, IDs) and redacts it automatically.",
+  "slug": "ai-smart-redaction"
+ },
+ {
+  "id": "ai-rename",
+  "name": "AI Smart Rename",
+  "category": "AI Features",
+  "description": "Let Gemini suggest a descriptive file name based on the content.",
+  "slug": "ai-smart-rename"
+ },
+ {
+  "id": "html-to-pdf",
+  "name": "HTML to PDF",
+  "category": "Convert to PDF",
+  "description": "Render an .html file as a PDF (scripts are removed).",
+  "slug": "html-to-pdf"
+ },
+ {
+  "id": "pdf-to-ppt",
+  "name": "PDF to PowerPoint",
+  "category": "Convert from PDF",
+  "description": "Turn each PDF page into a slide (image-based, not editable text).",
+  "slug": "pdf-to-powerpoint"
+ },
+ {
+  "id": "ppt-to-pdf",
+  "name": "PowerPoint to PDF",
+  "category": "Convert to PDF",
+  "description": "Convert .pptx slides to PDF (slide text only; images and shapes are not included).",
+  "slug": "powerpoint-to-pdf"
+ },
+ {
+  "id": "ai-ask-multi",
+  "name": "Ask Across PDFs",
+  "category": "AI Features",
+  "description": "Index several PDFs and ask questions across all of them, with file and page citations.",
+  "slug": "ask-across-pdfs"
+ }
+]
