@@ -1,5 +1,6 @@
 ---
 interface Props { title: string; description: string; path: string; jsonLd?: object[]; }
+import Analytics from '@vercel/analytics/astro';
 const { title, description, path, jsonLd = [] } = Astro.props;
 const canonical = new URL(path, Astro.site).href;
 ---
@@ -8,6 +9,7 @@ const canonical = new URL(path, Astro.site).href;
 <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{title}</title><meta name="description" content={description} /><link rel="canonical" href={canonical} />
 <meta property="og:title" content={title} /><meta property="og:description" content={description} /><meta property="og:url" content={canonical} />
+<Analytics />
 {jsonLd.map((d) => <script type="application/ld+json" set:html={JSON.stringify(d).replace(/</g, '\\u003c')} />)}
 <style is:global>
 body{font:17px/1.7 system-ui,sans-serif;max-width:720px;margin:0 auto;padding:24px;color:#1e293b}
